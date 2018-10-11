@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+function initAudio(){
+	var audio = new Audio();
+	audio.src = "Electro_1.wav";
+	audio.play();
+	var speedlist = document.getElementById("speedlist");
+	speedlist.addEventListener("change",changeSpeed);
+	function changeSpeed(event){
+		audio.playbackRate = event.target.value;
+	}
+}
+window.addEventListener("load", initAudio);
+</script>
+</head>
+<body>
+<select id="speedlist">
+  <option value="1">change speed</option>
+  <option value=".5">.5</option>
+  <option value="1">Normal</option>
+  <option value="1.5">1.5</option>
+  <option value="2">2</option>
+</select>
+</body>
+</html>

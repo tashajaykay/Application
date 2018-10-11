@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=utf-8">
+     <title>Sound Example task 5 playback</title>
+	 
+	 <script type="text/javascript" src="javaScriptFile1.js"></script>
+	 <script type="text/javascript" src="task5.js"></script>
+	 
+  </head>
+
+  <body bgcolor="#ff0000">
+
+   <div id="myDivContainer">
+	  <!-- html input list.-->
+	  <input type="file" id="files" name="files[]" multiple />
+	
+	  <br><br>
+	
+	  <input id="buttonA" type="button" name="buttonA" value="Play the sound" 
+	                                     onClick="playSound(aSoundBuffer)"> <br><br>
+										 
+	  <input id="button4" type="button" name="buttonA" value="Stop the sound" 
+	                                     onClick="stopSound()"> <br><br>
+      <script LANGUAGE="JavaScript">
+	   init();
+	   addEvents();
+      </script>
+	   
+	   <div id="myDivContainer1">
+		  <!-- html input list.-->
+		  <input type="file" id="files" name="files[]" multiple />
+	
+		  <br><br>
+	
+		  <input id="button1" type="button" name="button1" value="Play the sound" 
+		                                     onClick="playSound(aSoundBuffer)"> <br><br>
+										 
+		  <input id="button2" type="button" name="button1" value="Stop the sound" 
+		                                     onClick="stopSound()"> <br><br>
+	      <script LANGUAGE="JavaScript">
+		   init();
+		   addEvents();
+	      </script>
+	   </div>
+	   
+   </div>
+  	   
+ </body>
+ 
+</html>

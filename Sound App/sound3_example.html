@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=utf-8">
+     <title>Sound Example 1 week 12</title>
+	 
+	 <script type="text/javascript" src="sound3_example.js"></script>
+  </head>
+
+  <body bgcolor="orange">
+
+   <div id="myDivContainer">
+	  <!-- html input list.-->
+	  <input type="file" id="files" name="files[]" multiple />
+	
+	  <br><br>
+	
+	  <input id="button1" type="button" name="button1" value="Play the sound" 
+	                                     onClick="playSound(aSoundBuffer)"> <br><br>
+										 
+	  <input id="button2" type="button" name="button1" value="Stop the sound" 
+	                                     onClick="stopSound()"> <br><br>
+      <script LANGUAGE="JavaScript">
+	   init();
+	   addEvents();
+      </script>
+   </div>
+  	   
+ </body>
+ 
+</html>

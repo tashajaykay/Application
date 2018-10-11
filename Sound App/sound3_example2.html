@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=utf-8">
+     <title>Oscillator Sound Synthesis - Sine wave week 12</title>
+	 
+	 <script type="text/javascript" src="sound3_example2.js"></script>
+  </head>
+
+  
+	
+   <h2>Modal Example</h2>
+   
+   <!-- Trigger/Open The Modal -->
+   <button id="myBtn">Open Modal</button>
+   
+   <!-- The Modal -->
+   <div id="myModal" class="modal">
+   
+	 <!-- Modal content -->
+	 <div class="modal-content">
+	   <span class="close">&times;</span>
+	   <script type="text/javascript" src="chroma.js"></script>
+	   <script type="text/javascript" src="week11.js"></script>
+
+	   <body bgcolor="purple">
+		
+		<div id="myDivContainer">
+			<!-- HTML input list. -->
+			<input type="file" id="files" name="files[]" multiple />
+
+			<br><br>
+
+			<input id="button1" type="button" name="button1" value="Play the sound" 
+												onClick="playSound(aSoundBuffer)"> <br><br>
+
+			<input id="button2" type="button" name="button2" value="Stop the sound" 
+												onClick="stopSound()"> <br><br>
+
+
+			<!-- The canvas where we visualise our waveform. -->
+			<canvas id="canvas" width="600" height="300"></canvas>
+			<!--The canvas where we visualise our spectrogram-->
+			<canvas id="canvas2" width="640" height="360"></canvas>
+			
+			<div id="debugInfo" style="position: absolute; top: 70px; left: 650px; width: 700px; background: Olive;">
+			TESTING...
+			</div>
+
+			<!-- Initalise the audio context.. -->
+			<script LANGUAGE="JavaScript">
+				init();
+				addEvents();
+			</script>
+				
+	 </div>
+   
+   </div>
+
+
+   <script>
+	// Get the modal
+	var modal = document.getElementById('myModal');
+	
+	// Get the button that opens the modal
+	var btn = document.getElementById("myBtn");
+	
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+	
+	// When the user clicks the button, open the modal 
+	btn.onclick = function() {
+		modal.style.display = "block";
+	}
+	
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+		modal.style.display = "none";
+	}
+	
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+	</script>
+	
+
+ </body>
+ 
+</html>

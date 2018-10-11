@@ -1,0 +1,69 @@
+<!-- Sound Example - Simple Visualiser - A graph of the waveform / Time Domain. -->
+<!-- Uses separate .js and .html files. -->
+<!-- Version: 2.0 -->
+
+<!DOCTYPE html>
+<script src="myJavaScriptFile.js" type="text/javascript" charset="utf-8"></script>
+
+<html>
+	<head>
+    	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+		<title>Sound Example - Simple Visualiser - A graph of the waveform / Time Domain</title>
+
+		<!-- Here we include the our JavaScript file. You can include multiple files. -->
+		<!-- The files can have any name. -->
+		<script type="text/javascript" src="task7.js"></script>
+		<!-- <script type="text/javascript" src="taskk7.js"></script> -->
+		
+	</head>
+
+	<body bgcolor="blue">
+		
+		<div id="myDivContainer1" class="wrapper">
+			<!-- HTML input list. -->
+			<input type="file" id="files" name="files[]" multiple />
+
+			<br><br>
+
+			<input id="button1" type="button" class="playbutton" name="button1" value="Play the sound" 
+												onClick="playSound(aSoundBuffer)"> <br><br>
+
+			<input id="button2" type="button" class="stopbutton" name="button2" value="Stop the sound" 
+												onClick="stopSound()"> <br><br>
+
+
+			<!-- The canvas where we visualise our waveform. -->
+			<canvas id="canvas" class="player" width="600" height="300"></canvas>
+
+			<!-- Initalise the audio context.. -->
+			<script LANGUAGE="JavaScript">
+				init();
+				addEvents();
+			</script>
+	</div>
+
+
+
+				<div id="myDivContainer2" class="wrapper">
+					<!-- HTML input list. -->
+					<input type="file" id="files" name="files[]" multiple />
+
+					<br><br>
+
+					<input id="buttonA" type="button" class="playbutton" name="buttonA" value="Play the sound" 
+														onClick="playSound(aSoundBuffer)"> <br><br>
+
+					<input id="buttonB" type="button" class="stopbutton" name="buttonB" value="Stop the sound" 
+														onClick="stopSound()"> <br><br>
+
+
+					<!-- The canvas where we visualise our waveform. -->
+					<canvas id="canvas1" class="player" width="600" height="300"></canvas>
+
+					<!-- Initalise the audio context.. -->
+				
+
+		</div> 
+
+	</body>
+</html> 
