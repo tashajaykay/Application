@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+   <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	 <title>Memory Match</title>
+	 
+	 <script language="javascript" type="text/javascript" src="flip.js"></script>
+	 <link id="pagestyle" rel="Stylesheet" type="text/css" href="flip.css">
+ <script src="flip2.js"></script>
+ 
+  </head>
+  
+  
+	
+  <body>
+           
+	  
+		<marquee behavior="alternate"><h1>Calender Memory Match<h1> </marquee>
+   
+              
+		<button type="button" onclick="visible()">Show instructions</button>
+	     <button type="button" onclick="invisible()">Hide </button>
+		 
+	  
+         <p id="p1">
+		 This is a and fun memory game,Can you match the months? 
+		 flip, reaveal and match the words as quickly as possible before the timer runs out !
+		 Use the mouse to interact.
+		 </p>
+		 
+	
+		<!--- Timer-->
+
+     <script>
+function countDown(secs,elem) {
+	var element = document.getElementById(elem);
+	element.innerHTML = "You have "+secs+" seconds";
+	if(secs < 1) {
+		clearTimeout(timer);
+		element.innerHTML = '<h2>GAME OVER!</h2>';
+		element.innerHTML += '<a href="game.html">Start Over</a>';
+	}
+	secs--;
+	var timer = setTimeout('countDown('+secs+',"'+elem+'")',6000);
+}
+</script>
+
+<div id="status"></div>
+<script>countDown(20,"status");</script>
+  
+  <div id="memory_board"></div>
+<script>newBoard();</script>
+  
+         
+  
+</body>
+</html>
